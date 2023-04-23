@@ -2,6 +2,12 @@ FROM node:19-slim
 
 WORKDIR /home/node/app
 
-USER node
+COPY package*.json .npmrc ./
 
-CMD [ "tail", "-f", "/dev/null" ]
+RUN npm install
+
+COPY . ./
+
+RUN npx prisma generate
+
+CMD [ "npm", "run", "dev" ]
