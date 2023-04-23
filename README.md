@@ -4,6 +4,13 @@ just creating a simple nextjs app
 ## Running
 
 ```sh
+# install the dependencies (generate node_modules)
+npm install
+
+# generate the prisma files (node_modules/.prisma)
+npx prisma generate
+
+# initiate the node app
 npm run dev
 ```
 
