@@ -15,5 +15,7 @@ npm install @prisma/client
 
 # prisma
 npx prisma init # creates the .env and prisma/schema.prisma
+
+npx prisma migrate dev --name init # migrate to database
 ```
 
